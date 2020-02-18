@@ -4,7 +4,7 @@ from datetime import datetime,date
 import time
 import openpyxl
 
-def guardarDato(numero):
+def guardarDato(numero): #Esta funcion guarda en el excel el valor obtenido de internet
     excelDoc = openpyxl.load_workbook('prueba.xlsx')
     hoja = excelDoc.get_sheet_by_name('Hoja1')
     hoja.append([numero,datetime.now()])
